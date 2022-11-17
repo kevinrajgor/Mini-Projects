@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<style>
+    .box {
+        background-color: black;
+    }
+
+    .boxs {
+        color: lightblue;
+        text-decoration: none;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    @media screen and (max-width:767px) {
+        .boxs {
+            display: block;
+            text-align: center;
+            padding: 2px;
+            margin: 2px;
+        }
+
+        .box {
+            padding: 15px;
+        }
+    }
+
+    @media screen and (min-width:768px) {
+        .boxs {
+            display: inline;
+            padding: 2px;
+            margin: 3px;
+        }
+
+        .box {
+            padding: 15px;
+            text-align: right;
+        }
+    }
+
+    }
+</style>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Excercises2.1</title>
+</head>
+
+<body>
+    <nav class="box">
+        <a class="boxs" href="#">About</a>
+        <a class="boxs" href="#">Courses</a>
+        <a class="boxs" href="#">Forum</a>
+        <a class="boxs" href="#">Learning Paths</a>
+        <a class="boxs" href="#">Contact</a>
+    </nav>
+</body>
+
+</html>
