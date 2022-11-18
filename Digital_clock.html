@@ -2,73 +2,11 @@
 <html lang="en">
 
 <head>
-    <style>
-        body {
-            margin: 0;
-            display: flex;
-            align-items: center;
-            flex-direction: column;
-            height: 100vh;
-            justify-content: center;
-            background: url("https://images.unsplash.com/photo-1472214103451-9374bd1c798e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80");
-            background-size: cover;
-            overflow: hidden;
-        }
-
-        h2 {
-            text-transform: uppercase;
-            letter-spacing: 4px;
-            font-size: 25px;
-            text-align: center;
-            color: rgb(255, 255, 255);
-            text-shadow: 2px 2px 4px #111;
-        }
-
-        .clock {
-            display: flex;
-        }
-
-        .clock div {
-            margin: 10px;
-            position: relative;
-        }
-
-        .clock span {
-            font-family: sans-serif;
-            width: 120px;
-            height: 100px;
-            background-color: slateblue;
-            opacity: 70%;
-            color: white;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: 50px;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-        }
-
-        .clock .text {
-            height: 30px;
-            font-size: 15px;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            background: darkblue;
-            opacity: 70%;
-        }
-
-        .clock #ampm {
-            bottom: 0;
-            position: absolute;
-            width: 60px;
-            height: 30px;
-            font-size: 20px;
-            background-color: green;
-        }
-    </style>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Digital Clock</title>
+    <link rel="stylesheet" href="/Git/Mini-Projects/Digital_clock.css">
 </head>
 
 <body>
@@ -90,37 +28,7 @@
             <span id="ampm">AM</span>
         </div>
     </div>
-    <script>
-        const hourEl = document.getElementById("hour");
-        const minuteEl = document.getElementById("minutes");
-        const secondEl = document.getElementById("seconds");
-        const ampmEl = document.getElementById("ampm");
-
-        function updateClock() {
-            let h = new Date().getHours();
-            let m = new Date().getMinutes();
-            let s = new Date().getSeconds();
-            let ampm = "AM";
-
-            if (h > 12) {
-                h = h - 12;
-                ampm = "PM";
-            }
-
-            h = h < 10 ? "0" + h : h;
-            m = m < 10 ? "0" + m : m;
-            s = s < 10 ? "0" + s : s;
-
-            hourEl.innerText = h;
-            minuteEl.innerText = m;
-            secondEl.innerText = s;
-            ampmEl.innerText = ampm;
-            setTimeout(() => {
-                updateClock();
-            }, 1000)
-        }
-        updateClock();
-    </script>
+    <script src="/Git/Mini-Projects/Digital_clock.js"></script>
 </body>
 
 </html>
